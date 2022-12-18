@@ -113,3 +113,13 @@ jobs:
       with:
         name: MSIX Package
         path: ${{ env.Wap_Project_Directory }}\AppPackages
+
+    
+    # Build and push to Docker Hub
+    - name: Build and push to Docker Hub
+      uses: rossmaclean/docker-build-push-action@v0.0.15
+      with:
+        image: eburghoorn/sin-financieel-dashboard
+        registry: docker.io
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
