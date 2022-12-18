@@ -7960,9 +7960,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\eburg\\Documents\\Thomas More\\2APPAI01\\Semester 1\\Devops & security\\Case study\\financieel_dashboard\\Case study.csproj",
-      "projectName": "Case study",
-      "projectPath": "C:\\Users\\eburg\\Documents\\Thomas More\\2APPAI01\\Semester 1\\Devops & security\\Case study\\financieel_dashboard\\Case study.csproj",
+      "projectUniqueName": "C:\\Users\\eburg\\Documents\\Thomas More\\2APPAI01\\Semester 1\\Devops & security\\Case study\\financieel_dashboard\\Case_study.csproj",
+      "projectName": "Case_study",
+      "projectPath": "C:\\Users\\eburg\\Documents\\Thomas More\\2APPAI01\\Semester 1\\Devops & security\\Case study\\financieel_dashboard\\Case_study.csproj",
       "packagesPath": "C:\\Users\\eburg\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\eburg\\Documents\\Thomas More\\2APPAI01\\Semester 1\\Devops & security\\Case study\\financieel_dashboard\\obj\\",
       "projectStyle": "PackageReference",

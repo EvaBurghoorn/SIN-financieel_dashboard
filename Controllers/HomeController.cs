@@ -38,11 +38,18 @@ namespace Case_study.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create([Bind("voornaam,naam,bankrekeningnummer,bic,datumVanOnkosten,categorie,anders,onkosten,totaalBedrag,bijlage")] onkostenNota onkostenNota)
+        public async Task<IActionResult> CreateAsync([Bind("voornaam,naam,bankrekeningnummer,bic,datumVanOnkosten,categorie,anders,onkosten,totaalBedrag,bijlage")] onkostenNota onkostenNota)
         {
             // klassen en properties met hoofdletters !!
             if (ModelState.IsValid)
             {
+
+                onkostenNota newOnkostenNota = new onkostenNota();
+
+                // Hier client call doen om data weg te schrijven naar Contentful
+                await _managementClient.CreateEntry<onkostenNota>(newOnkostenNota, "sinFinancieelDashboard");
+
+
                 // return Ok(onkostenNota);
                 return Ok("Volledige naam: " + onkostenNota.voornaam + " " + onkostenNota.naam + '\n' +
                 "Bankrekeningnummer (bic): " + onkostenNota.bankrekeningnummer + " " + onkostenNota.bic + '\n' +
@@ -51,9 +58,6 @@ namespace Case_study.Controllers
                 "Onkosten: " + onkostenNota.onkosten + '\n' +
                 "Totaal bedrag: €" + onkostenNota.totaalBedrag + '\n' +
                 "Bijlage: " + onkostenNota.bijlage);
-
-                // Hier client call doen om data weg te schrijven naar Contentful
-                // ??? await _managementClient.CreateEntry<onkostenNota>(onkostenNota);
             }
             return View();
         }

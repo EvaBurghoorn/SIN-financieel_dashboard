@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BAtltN/GEY/aNo0yKFuD5P7V9gA/jcQ3KKAYnHb42cfBnYgVt58mZ04wgfFip4gjcXxXFu5mp830B8PGNPFf3Q==",
+  "dgSpecHash": "SqKjApxwTvt3No1Ak8Fqg2F/Er8zSxv5Y3lBx5whxDH8g3Fhc0EE/x6iyJHVHUN1/hjf5PseMkox3rvWbGJ1dg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\eburg\\Documents\\Thomas More\\2APPAI01\\Semester 1\\Devops & security\\Case study\\financieel_dashboard\\Case study.csproj",
+  "projectFilePath": "C:\\Users\\eburg\\Documents\\Thomas More\\2APPAI01\\Semester 1\\Devops & security\\Case study\\financieel_dashboard\\Case_study.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\eburg\\.nuget\\packages\\contentful.aspnetcore\\7.2.2\\contentful.aspnetcore.7.2.2.nupkg.sha512",
     "C:\\Users\\eburg\\.nuget\\packages\\contentful.csharp\\7.2.2\\contentful.csharp.7.2.2.nupkg.sha512",
