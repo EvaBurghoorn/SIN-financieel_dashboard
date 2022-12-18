@@ -1,0 +1,85 @@
+@using System;
+@using Contentful.Core.Models;
+@{
+    ViewData["Title"] = "Nieuwe onkostennota";
+}
+<h1>@ViewData["Title"]</h1>
+
+<button><a class="text-dark" asp-area="" asp-controller="Home" asp-action="OverzichtNota">Overzicht onkostennota's</a></button>
+
+
+<form method="post">
+                <div class="row d-flex">
+              
+                        <p class="col-12 col-md-5">
+                        <label class="fst-italic" for="voornaam" >Voornaam</label>
+                        @* <input asp-for="voornaam" /> *@
+                        <input aria-label="Vul dit veld in" name="Voornaam" type="text" class="form-control" id="voornaam" placeholder="Voornaam" required>
+
+                    </p>
+                        <p class="col-12 col-md-5">
+                            <label class="fst-italic" for="achternaam">Achternaam</label>
+                            <input aria-label="Vul dit veld in" name="achternaam" type="text" class="form-control" id="naam" placeholder="Achternaam" required>
+                    </p>
+                 
+                    <p class="col-12 col-md-5">
+                        <label for="bankrekeningNummer">Bankrekening nummer</label>
+                        <input aria-label="Vul dit veld in" name="bankrekeningNummer" type="text" class="form-control" id="bankrekeningNummer" placeholder="Geef een bankrekening nummer" required>
+                        
+                    </p>
+
+                    <p class="col-12 col-md-2">
+                        <label for="BIC">BIC</label>
+                        <input name="BIC" type="text" class="form-control" id="BIC" placeholder="BIC">
+                    </p>
+              
+
+                    <p class="col-12 col-md-3">
+                        <label for="datumsOnkosten">Datum van onkosten</label>
+                        <input aria-label="Vul dit veld in" name="datumsOnkosten" type="date" class="form-control" id="datumsOnkosten" placeholder="Datum van onkosten" required>
+                    </p>
+
+                    <p class="col-10">
+                        <label for="beschrijvingUitgave">Beschrijving uitgave</label>
+                        <textarea  aria-label="Vul dit veld in" name="beschrijvingUitgave" class="form-control" id="beschrijvingUitgave" placeholder="Geef een beschrijving van de uitgave" required></textarea>
+                    </p>
+
+                    <p class="col-12 col-md-5">
+                        <label for="categorie">Categorie</label>
+                        <input aria-label="Vul dit veld in" name="categorie" type="dropdown" class="form-control" id="categorie" placeholder="Categorie" required>
+                    </p>
+                    <p class="col-12 col-md-5">
+                        <label for="anders">Anders</label>
+                        <input name="anders" type="text" class="form-control" id="anders" placeholder="Anders" >
+                    </p>
+
+                    <p class="col-12 col-md-5">
+                        <label for="onkostenDetails">Onkosten Details</label>
+                        <textarea aria-label="Vul dit veld in" name="onkostenDetails" class="form-control" id="onkostenDetails" placeholder="Onkosten details" required></textarea>
+                    </p>
+                    <p class="col-12 col-md-5">
+                        <label for="totaalBedrag">Totaal bedrag</label>
+                        <input aria-label="Vul dit veld in" name="totaalBedrag" type="number" class="form-control" id="totaalBedrag" placeholder="Totaal bedrag" required>
+                    </p>
+                    <p class="col-12 col-md-5">
+                        <label for="bijlage">Bijlage</label>
+                        <input aria-label="Vul dit veld in" name="bijlage" type="file" class="form-control" id="bijlage" placeholder="Bijlage" required>
+                    </p>
+
+
+
+                    <p class="col-12 p-1 text-secondary">
+                        <input type="submit" class=" rounded bg-secondary text-white border-secondary" value="Nieuwe onkostennota">
+                    </p>
+                </div>
+            </form>
+
+            
+
+
+@* 
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Nieuwe onkostennota
+</button> *@
+
+

@@ -1,0 +1,67 @@
+﻿@model Case_study.Models.onkostenNota;
+
+@{
+    ViewData["Title"] = "Creëer een nieuwe onkostennota";
+}
+<h1>@ViewData["Title"]</h1>
+
+<button><a class="text-dark" asp-area="" asp-controller="Home" asp-action="OverzichtNota">Overzicht onkostennota's</a></button>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div class="form-group">
+                <label asp-for="voornaam" class="control-label"></label>
+                <input aria-label="Vul dit veld in" asp-for="voornaam" type="text" class="form-control" placeholder="Voornaam" required/>
+            </div>
+            <div class="form-group">
+                <label asp-for="naam" class="control-label"></label>
+                <input aria-label="Vul dit veld in" asp-for="naam" type="text" class="form-control" placeholder="Achternaam" required />
+            </div>
+            <div class="form-group">
+                <label asp-for="bankrekeningnummer" class="control-label"></label>
+                <input aria-label="Vul dit veld in" asp-for="bankrekeningnummer" type="text" class="form-control"placeholder="bankrekeningrummer" required />
+            </div>
+            <div class="form-group">
+                <label asp-for="bic" class="control-label"></label>
+                <input aria-label="Vul dit veld in" asp-for="bic" type="text" class="form-control" placeholder="BIC"/>
+            </div>
+            <div class="form-group">
+                <label asp-for="datumVanOnkosten" class="control-label"></label>
+                <input aria-label="Vul dit veld in" asp-for="datumVanOnkosten" type="date"  class="form-control" placeholder="Datum van onkosten" required/>
+            </div>
+            <div class="form-group">
+                <label asp-for="categorie" class="control-label"></label>
+                <input aria-label="Vul dit veld in" asp-for="categorie" type="dropdown" class="form-control" placeholder="Categorie" required/>
+            </div>
+            <div class="form-group">
+                <label asp-for="anders" class="control-label"></label>
+                <input aria-label="Vul dit veld in" asp-for="anders"  class="form-control" placeholder="Anders"/>
+            </div>
+            <div class="form-group">
+                <label asp-for="onkosten" class="control-label"></label>
+                <input aria-label="Vul dit veld in" asp-for="onkosten" type="text" class="form-control" placeholder="Geef een beschrijving van de uitgave" required/>
+            </div>
+                <div class="form-group">
+                <label asp-for="totaalBedrag" class="control-label"></label>
+                <input aria-label="Vul dit veld in" asp-for="totaalBedrag" type="number" class="form-control" placeholder="Totaal bedrag" required/>
+            </div>
+            <div class="form-group">
+                <label asp-for="bijlage" class="control-label"></label>
+                <input aria-label="Vul dit veld in" asp-for="bijlage" type="file" class="form-control" placeholder="Bijlage" required/>
+            </div>
+            
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }

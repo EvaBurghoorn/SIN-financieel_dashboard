@@ -1,0 +1,40 @@
+@* @using System; *@
+@using Contentful.Core.Models;
+@model ContentfulCollection<onkostenNota>
+
+@{
+    ViewData["Title"] = "Overzicht onkostennota's";
+}
+<h1>@ViewData["Title"]</h1>
+
+
+<h1>Onkosten Nota</h1>
+
+
+
+
+@foreach (var onkostenNota in Model)
+{
+    <details>
+  <summary>Datum van onkosten: @onkostenNota.datumVanOnkosten</summary>
+  <p>Naam: @onkostenNota.naam</p>
+    <p>Voornaam: @onkostenNota.voornaam</p>
+    <p>Bankrekeningnummer: @onkostenNota.bankrekeningnummer</p>
+    <p>BIC: @onkostenNota.bic</p>
+    <p>Datum van onkosten: @onkostenNota.datumVanOnkosten</p>
+    <p>Categorie: @onkostenNota.categorie</p>
+    <p>Onkosten: @onkostenNota.onkosten</p>
+    <p>Totaal bedrag: @onkostenNota.totaalBedrag euro</p>
+    <p>Bijlage:</p>
+    <ul>
+        @foreach (var bijlage in onkostenNota.bijlage)
+        {
+            <li><a href="@bijlage.File.Url">@bijlage.Title</a></li>
+        }
+    </ul>
+</details>
+
+
+
+       
+    }
