@@ -17,7 +17,7 @@ jobs:
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
 
     - name: Build and push to Docker Hub
-      uses: rossmaclean/docker-build-push-action
+      uses: rossmaclean/docker-build-push-action@v0.0.15
       with:
         image: eburghoorn/sin-financieel-dashboard
         registry: docker.io
